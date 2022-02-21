@@ -1,0 +1,91 @@
+$icoPath: "../public/icons/";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F8F6F7;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  z-index: 2;
+}
+
+.fullscreen-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: whitesmoke;
+  opacity: 90%;
+  padding: -1px;
+  cursor: pointer;
+}
+
+.fullscreen-controls.isOff {
+  background-image: url(#{$icoPath}/outline_fullscreen_black_24dp.png);
+}
+
+.fullscreen-controls.isOn {
+  background-image: url(#{$icoPath}/outline_fullscreen_exit_black_24dp.png);
+}
+
+
+.address-box {
+  font-size: calc(1vw + 10px);
+
+  position: fixed;
+  top: .8em;
+  left: .8em;
+  z-index: 1;
+  background-color: #6b645d;
+  opacity: 70%;
+  padding: .25em 5em .25em .25em;
+  color: white;
+
+  p {
+    padding: .25em;
+    margin: 0;
+
+    &.line1 {
+      font-size: .8em;
+    }
+  }
+
+  em {
+    font-weight: bold;
+  }
+
+  .moreLink {
+    position: absolute;
+    top: .25em;
+    right: 1em;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      padding-left: .25em;;
+    }
+
+    &.open:after {
+      content: "\21E1";
+    }
+
+    &.closed:after {
+      content: "\21E3";
+    }
+
+  }
+
+}
